@@ -3,143 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Mon CV Sémantique - Géovanie KOUCHIKO</title>
 </head>
 <body>
-    <!-- 1. EN-TÊTE : Mon identité et ma présentation -->
-    <header>
-        <!-- Ma photo de profil sémantique -->
-        <figure>
-            <img src="photo-profil1.jpg" alt="Photo de profil de Géovanie KOUCHICO">
-        </figure>
-        
-        <!-- Mon nom est le titre principal unique de ma page -->
-        <h1>Géovanie KOUCHIKO</h1>
-        
-        <!-- Ma filière (Titre de niveau 2) -->
-        <h2>Développement web & mobile</h2>
-        
-        <!-- Mon texte de présentation dans un paragraphe -->
-        <p>
-            Passionné par le développement web front-end et l'automatisation, 
-            j'applique des méthodes structurées pour industrialiser mes espaces 
-            de travail et concevoir des interfaces réactives et performantes.
-        </p>
 
-        <!-- AJOUT MERCREDI MATIN : La citation -->
-        <blockquote>
-            <p>« L'automatisation et la rigueur sémantique sont les clés d'un code durable. »</p>
-        </blockquote>
-    </header>
+    <div class="cv-container">
 
-    <!-- 2. CONTENU PRINCIPAL : Expériences et Formations -->
-    <main>
-        
-        <!-- Section des Expériences -->
-        <section>
-            <h2>Expériences professionnelles</h2>
+        <header>
+            <figure>
+                <img src="photo-profil1.jpg" alt="Photo de profil de Géovanie KOUCHICO">
+            </figure>
             
-            <h3>Développeur Web Junior – Projets personnels</h3>
-            <p><em>Novembre 2025 – Présent</em></p>
-            <ul>
-                <li>Création de sites web vitrines en <strong>HTML</strong>, <strong>CSS</strong> et <strong>JavaScript</strong>.</li>
-                <li>Développement de mini-applications dynamiques avec <strong>PHP</strong> et <strong>MySQL</strong>.</li>
-                <li>Utilisation de <strong>GitHub</strong> pour le suivi des projets et la collaboration.</li>
-                <li>Mise en pratique des bonnes pratiques de <strong>responsive design</strong> et UX/UI.</li>
-            </ul>
-
-            <h3>Stagiaire Développeur Web – Projet étudiant</h3>
-            <p><em>Novembre 2025 – Présent</em></p>
-            <ul>
-                <li>Création de pages web dynamiques pour un projet scolaire en HTML, CSS et JavaScript.</li>
-                <li>Intégration d’un formulaire de contact fonctionnel avec <strong>PHP</strong>.</li>
-                <li>Test et correction de bugs pour améliorer la navigation et l’affichage <strong>responsive</strong>.</li>
-                <li>Collaboration avec des camarades pour organiser le code et la mise en page.</li>
-            </ul>
-
-            <h3>Candidat Technique - Présentation du Projet IMeN</h3>
-            <p><em>Mai 2026</em></p>
-            <ul>
-                <li>Développement et soutenance formelle du projet d'industrialisation d'écosystème <strong>"IMeN"</strong>.</li>
-                <li>Application de la méthode <strong>FORGE</strong> pour l'automatisation des espaces de développement via des scripts.</li>
-                <li>Conception d'une interface web responsive simulant une application de messagerie.</li>
-            </ul>
-        </section>
-
-        <!-- Section des Formations -->
-        <section>
-            <h2>Formations</h2>
+            <h1>Géovanie KOUCHIKO</h1>
             
-            <h3>Parcours d'Évaluation Technique</h3>
-            <p>En cours — 2026</p>
-            <ul>
-                <li>Validation des cycles de projet et soutenances devant jury (Sprint 01 validé).</li>
-                <li>Apprentissage approfondi des fondamentaux du web : HTML5 sémantique, CSS3 et JavaScript.</li>
-            </ul>
-        </section>
+            <p class="subtitle">Développement web & mobile</p>
+            
+            <p>
+                Passionné par le développement web front-end et l'automatisation, 
+                j'applique des méthodes structurées pour industrialiser mes espaces 
+                de travail et concevoir des interfaces réactives et performantes.
+            </p>
 
-    </main>
+            <blockquote>
+                <p>« L'automatisation et la rigueur sémantique sont les clés d'un code durable. »</p>
+            </blockquote>
+        </header>
 
-    <!-- 3. ZONE LATÉRALE : Compétences, Qualités et Contact -->
-    <aside>
-        
-        <!-- Section Compétences -->
-        <section>
-            <h2>Compétences</h2>
-            <dl>
-                <dt>Développement Front-End</dt>
-                <dd>Maîtrise des langages HTML5, CSS3 et JavaScript pour créer des interfaces réactives.</dd>
+        <main>
+            
+            <section>
+                <h2>Expériences professionnelles</h2>
+                
+                <div class="item">
+                    <h3>Développeur Web Junior – Projets personnels</h3>
+                    <p class="item-date">Novembre 2025 – Présent</p>
+                    <ul>
+                        <li>Création de sites web vitrines en <strong>HTML</strong>, <strong>CSS</strong> et <strong>JavaScript</strong>.</li>
+                        <li>Développement de mini-applications dynamiques avec <strong>PHP</strong> et <strong>MySQL</strong>.</li>
+                        <li>Utilisation de <strong>GitHub</strong> pour le suivi des projets et la collaboration.</li>
+                        <li>Mise en pratique des bonnes pratiques de <strong>responsive design</strong> et UX/UI.</li>
+                    </ul>
+                </div>
 
-                <dt>Gestion de Version & IDE</dt>
-                <dd>Utilisation quotidienne de Visual Studio Code, Git et GitHub pour le suivi du code.</dd>
+                <div class="item">
+                    <h3>Stagiaire Développeur Web – Projet étudiant</h3>
+                    <p class="item-date">Novembre 2025 – Présent</p>
+                    <ul>
+                        <li>Création de pages web dynamiques pour un projet scolaire en HTML, CSS et JavaScript.</li>
+                        <li>Intégration d’un formulaire de contact fonctionnel avec <strong>PHP</strong>.</li>
+                        <li>Test et correction de bugs pour améliorer la navigation et l’affichage <strong>responsive</strong>.</li>
+                        <li>Collaboration avec des camarades pour organiser le code et la mise en page.</li>
+                    </ul>
+                </div>
 
-                <dt>Environnement Système</dt>
-                <dd>Travail en ligne de commande sous un environnement Linux avec Ubuntu via WSL.</dd>
+                <div class="item">
+                    <h3>Candidat Technique - Présentation du Projet IMeN</h3>
+                    <p class="item-date">Mai 2026</p>
+                    <ul>
+                        <li>Développement et soutenance formelle du projet d'industrialisation d'écosystème <strong>"IMeN"</strong>.</li>
+                        <li>Application de la méthode <strong>FORGE</strong> pour l'automatisation des espaces de développement via des scripts.</li>
+                        <li>Conception d'une interface web responsive simulant une application de messagerie.</li>
+                    </ul>
+                </div>
+            </section>
 
-                <dt>Industrialisation</dt>
-                <dd>Automatisation des espaces de travail grâce à l'écriture de scripts personnalisés.</dd>
-            </dl>
-        </section>
+            <section>
+                <h2>Formations</h2>
+                
+                <div class="item">
+                    <h3>Parcours d'Évaluation Technique</h3>
+                    <p class="item-date">En cours — 2026</p>
+                    <ul>
+                        <li>Validation des cycles de projet et soutenances devant jury (Sprint 01 validé).</li>
+                        <li>Apprentissage approfondi des fondamentaux du web : HTML5 sémantique, CSS3 et JavaScript.</li>
+                    </ul>
+                </div>
+            </section>
 
-        <section>
-            <h3>Langues</h3>
-            <ul>
-               <li><strong>Français :</strong> Courant (Langue d'apprentissage)</li>
-               <li><strong>Anglais :</strong> Technique / Intermédiaire</li>
-            </ul>
-        </section>
+        </main>
 
-        <!-- Section Qualités -->
-        <section>
-            <h2>Qualités</h2>
-            <ul>
-                <li>Rigueur technique</li>
-                <li>Esprit d'équipe et collaboration</li>
-                <li>Capacité d'adaptation et autonomie</li>
-            </ul>
-        </section>
+        <aside>
+            
+            <section>
+                <h2>Compétences</h2>
+                <dl>
+                    <dt>Développement Front-End</dt>
+                    <dd>Maîtrise des langages HTML5, CSS3 et JavaScript pour créer des interfaces réactives.</dd>
 
-        <!-- Section Contact avec la balise d'expert <address> -->
-        <section>
-            <h2>Contact</h2>
-            <address>
-                <p>Numéro : <a href="tel:+2290194723719">+229 01 947 237 19</a></p>
-                <p>Email : <a href="mailto:geovanie.kouchico@example.com">geovanie.kouchico@example.com</a></p>
-                <p>Profils : 
-                    <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a> | 
-                    <a href="https://github.com/kouchikogeovanie6-cpu" target="_blank" rel="noopener">GitHub</a> | 
-                    <a href="https://www.facebook.com/search/top/?q=G%C3%A9ovanie%20Kouchico" target="_blank" rel="noopener">Facebook</a> | 
-                    <a href="https://wa.me/2290194723719" target="_blank" rel="noopener">WhatsApp</a>
-                </p>
-                <p>Localisation : Bénin</p>
-            </address>
-        </section>
+                    <dt>Gestion de Version & IDE</dt>
+                    <dd>Utilisation quotidienne de Visual Studio Code, Git et GitHub pour le suivi du code.</dd>
 
-    </aside>
+                    <dt>Environnement Système</dt>
+                    <dd>Travail en ligne de commande sous un environnement Linux avec Ubuntu via WSL.</dd>
 
-    <!-- 4. PIED DE PAGE : Pour compléter l'exercice -->
-    <footer>
-        <p>&copy; 2026 Géovanie KOUCHIKO. Tous droits réservés.</p>
-    </footer>
-</body>
+                    <dt>Industrialisation</dt>
+                    <dd>Automatisation des espaces de travail grâce à l'écriture de scripts personnalisés.</dd>
+                </dl>
+            </section>
+
+            <section>
+                <h3>Langues</h3>
+                <ul>
+                   <li><strong>Français :</strong> Courant (Langue d'apprentissage)</li>
+                   <li><strong>Anglais :</strong> Technique / Intermédiaire</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Qualités</h2>
+                <ul>
+                    <li>Rigueur technique</li>
+                    <li>Esprit d'équipe et collaboration</li>
+                    <li>Capacité d'adaptation et autonomie</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Contact</h2>
+                <address>
+                    <p>Numéro : <a href="tel:+2290194723719">+229 01 947 237 19</a></p>
+                    <p>Email : <a href="mailto:geovanie.kouchico@example.com">geovanie.kouchico@example.com</a></p>
+                    <p>Profils : 
+                        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a> | 
+                        <a href="https://github.com/kouchikogeovanie6-cpu" target="_blank" rel="noopener">GitHub</a> | 
+                        <a href="https://www.facebook.com/search/top/?q=G%C3%A9ovanie%20Kouchico" target="_blank" rel="noopener">Facebook</a> | 
+                        <a href="https://wa.me/2290194723719" target="_blank" rel="noopener">WhatsApp</a>
+                    </p>
+                    <p>Localisation : Bénin</p>
+                </address>
+            </section>
+
+        </aside>
+
+        <footer>
+            <p>&copy; 2026 Géovanie KOUCHIKO. Tous droits réservés.</p>
+        </footer>
+
+    </div> </body>
 </html>

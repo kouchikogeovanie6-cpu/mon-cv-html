@@ -1,0 +1,144 @@
+/* ==========================================================================
+   1. RÉINITIALISATION & CONFIGURATION GLOBALE (Domptage du Box Model)
+   ========================================================================== */
+
+/* Réinitialisation universelle : supprime les marges par défaut des navigateurs 
+   et force le modèle de boîte "border-box" pour des calculs de taille prévisibles.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuration de la base et héritage (60% Dominante de la Charte)
+*/
+body {
+    background-color: #FAFAFA; /* Blanc de sécurité adouci pour le confort visuel */
+    color: #0F172A;            /* Bleu Ardoise Profond pour un texte premium */
+    font-family: 'Inter', sans-serif; /* Police de corps épurée et lisible */
+    line-height: 1.6;          /* Espacement des lignes pour une lecture fluide */
+    padding: 40px 20px;        /* Espacement autour du CV pour éviter de coller aux bords de l'écran */
+}
+
+/* ==========================================================================
+   2. CONTENEUR PRINCIPAL (Mise en page de la feuille du CV)
+   ========================================================================== */
+
+/* Encapsule tout le contenu pour donner un effet de document propre et centré
+*/
+.cv-container {
+    background-color: #FFFFFF; /* Fond blanc pur pour faire ressortir le document */
+    max-width: 800px;          /* Largeur maximale optimale pour la lecture */
+    margin: 0 auto;            /* Centre automatiquement le bloc horizontalement */
+    padding: 40px;             /* Marge intérieure pour que le texte respire loin des bordures */
+    border-radius: 8px;        /* Arrondis discrets sur les coins */
+    border: 1px solid #E2E8F0; /* Bordures subtiles pour structurer le document */
+}
+
+/* ==========================================================================
+   3. TYPOGRAPHIE ET COULEURS DES TITRES (30% Secondaire)
+   ========================================================================== */
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif; /* Police moderne et géométrique */
+    color: #0F172A;                     /* Bleu Ardoise Profond */
+    font-weight: 700;                   /* Structure lourde et percutante */
+}
+
+/* En-tête principal (Ton nom) */
+h1 {
+    font-size: 2.2rem;
+    letter-spacing: -0.02em; /* Resserre légèrement les lettres pour un effet plus design */
+    margin-bottom: 5px;
+}
+
+/* Titre de ton poste / accroche */
+.subtitle {
+    font-size: 1.1rem;
+    color: #0EA5E9; /* Utilisation de la couleur d'accent pour le poste */
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 25px;
+}
+
+/* Titres de tes sections (Compétences, Expériences, Formations...) */
+h2 {
+    font-size: 1.4rem;
+    border-bottom: 2px solid #F1F5F9; /* Ligne de séparation chirurgicale sous chaque titre */
+    padding-bottom: 6px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   4. STRUCTURE DES BLOCS ET ESPACEMENTS (Padding & Margin)
+   ========================================================================== */
+
+section {
+    margin-bottom: 30px; /* Espace extérieur pour séparer chaque bloc de contenu */
+}
+
+/* Blocs spécifiques dans les listes de définitions ou d'expériences */
+.item {
+    margin-bottom: 20px; /* Sépare deux expériences ou formations distinctes */
+}
+
+.item-title {
+    font-weight: 600;
+    color: #0F172A;
+}
+
+.item-date {
+    font-size: 0.9rem;
+    color: #64748B; /* Gris ardoise plus doux pour les métadonnées (dates, lieux) */
+    margin-bottom: 5px;
+}
+
+/* ==========================================================================
+   5. LIENS ET PUCES MODERNES (10% Accent)
+   ========================================================================== */
+
+/* Style chirurgical pour tes coordonnées ou profils GitHub/LinkedIn */
+a {
+    color: #0EA5E9; /* Bleu Cyan Tech pour capter l'œil */
+    text-decoration: none; /* Nettoyage du soulignement à l'ancienne */
+    font-weight: 500;
+}
+
+/* Effet au survol de la souris */
+a:hover {
+    color: #0284C7; /* Devient légèrement plus foncé pour indiquer le clic */
+    text-decoration: underline; /* Le soulignement apparaît proprement au survol */
+}
+
+/* Nettoyage des listes à puces pour tes compétences */
+ul {
+    list-style: none; /* Supprime les puces noires basiques du navigateur */
+}
+
+ul li {
+    position: relative;
+    padding-left: 20px; /* Fait de la place pour la nouvelle puce personnalisée */
+    margin-bottom: 8px;
+}
+
+/* Génération de puces modernes et colorées en CSS */
+ul li::before {
+    content: "•";
+    color: #0EA5E9; /* Tes puces prennent ta couleur d'accent Bleu Cyan Tech */
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+/* Style spécifique pour ta photo de profil si tu l'as intégrée */
+img {
+    max-width: 150px;
+    border-radius: 50px; /* Rend la photo joliment arrondie */
+    border: 3px solid #E2E8F0; /* Ajoute un contour propre */
+    margin-bottom: 15px;
+}
