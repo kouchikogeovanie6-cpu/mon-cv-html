@@ -1,144 +1,188 @@
 /* ==========================================================================
-   1. RÉINITIALISATION & CONFIGURATION GLOBALE (Domptage du Box Model)
+   1. RÉINITIALISATION & CONFIGURATION GLOBALE
    ========================================================================== */
 
-/* Réinitialisation universelle : supprime les marges par défaut des navigateurs 
-   et force le modèle de boîte "border-box" pour des calculs de taille prévisibles.
-*/
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Force le calcul prévisible des tailles */
 }
 
-/* Configuration de la base et héritage (60% Dominante de la Charte)
-*/
 body {
-    background-color: #FAFAFA; /* Blanc de sécurité adouci pour le confort visuel */
-    color: #0F172A;            /* Bleu Ardoise Profond pour un texte premium */
-    font-family: 'Inter', sans-serif; /* Police de corps épurée et lisible */
-    line-height: 1.6;          /* Espacement des lignes pour une lecture fluide */
-    padding: 40px 20px;        /* Espacement autour du CV pour éviter de coller aux bords de l'écran */
+    background-color: #FAFAFA; /* Fond adouci (60% de la charte) */
+    color: #0F172A;            /* Bleu Ardoise Profond */
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    padding: 2.5rem 1.25rem;   /* Unités relatives rem pour la fluidité */
 }
 
 /* ==========================================================================
-   2. CONTENEUR PRINCIPAL (Mise en page de la feuille du CV)
+   2. MISE EN PAGE ET CENTRAGE (Comportement ÉLÉMENT BLOCK)
    ========================================================================== */
 
-/* Encapsule tout le contenu pour donner un effet de document propre et centré
-*/
 .cv-container {
-    background-color: #FFFFFF; /* Fond blanc pur pour faire ressortir le document */
-    max-width: 800px;          /* Largeur maximale optimale pour la lecture */
-    margin: 0 auto;            /* Centre automatiquement le bloc horizontalement */
-    padding: 40px;             /* Marge intérieure pour que le texte respire loin des bordures */
-    border-radius: 8px;        /* Arrondis discrets sur les coins */
-    border: 1px solid #E2E8F0; /* Bordures subtiles pour structurer le document */
+    background-color: #FFFFFF;
+    max-width: 800px;          /* Largeur maximale de la feuille de CV */
+    margin: 0 auto;            /* Centre le bloc entier au milieu de l'écran */
+    padding: 2.5rem;           /* Espace intérieur fluide */
+    border-radius: 8px;
+    border: 1px solid #E2E8F0; /* Bordure fine de structure */
 }
 
 /* ==========================================================================
-   3. TYPOGRAPHIE ET COULEURS DES TITRES (30% Secondaire)
+   STYLISATION DE LA PHOTO DE PROFIL (Structure Figure > Img)
    ========================================================================== */
 
-h1, h2, h3 {
-    font-family: 'Poppins', sans-serif; /* Police moderne et géométrique */
-    color: #0F172A;                     /* Bleu Ardoise Profond */
-    font-weight: 700;                   /* Structure lourde et percutante */
+header {
+    text-align: center; /* Centre horizontalement tout le contenu de l'en-tête */
 }
 
-/* En-tête principal (Ton nom) */
+header figure {
+    width: 150px;               /* Largeur stricte de la boîte de la photo */
+    height: 130px;              /* Hauteur stricte identique pour garantir un carré parfait */
+    margin: 0 auto 1.25rem auto; /* Centre le bloc de la photo et ajoute une marge en bas */
+    border-radius: 20%;         /* Arrondi à 50% pour transformer le carré en cercle parfait */
+    overflow: hidden;           /* Coupe chirurgicalement tout ce qui dépasse du cercle */
+    box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.1), 
+                0 2px 4px -1px rgba(15, 23, 42, 0.06); /* Ombre douce pour l'effet de relief */
+}
+
+header figure img {
+    width: 100%;                /* Force l'image à occuper toute la largeur du cercle */
+    height: 100%;               /* Force l'image à occuper toute la hauteur du cercle */
+    object-fit: cover;          /* Redimensionne l'image proportionnellement sans la déformer */
+    display: block;             /* Supprime l'espace résiduel sous l'image propre aux éléments inline */
+}
+
+/* ==========================================================================
+   3. TYPOGRAPHIE ET TITRES (30% Secondaire)
+   ========================================================================== */
+
+/* Unification moderne avec la police Poppins */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #0F172A;
+    font-weight: 700;
+}
+
 h1 {
     font-size: 2.2rem;
-    letter-spacing: -0.02em; /* Resserre légèrement les lettres pour un effet plus design */
-    margin-bottom: 5px;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.3rem;
 }
 
-/* Titre de ton poste / accroche */
 .subtitle {
     font-size: 1.1rem;
-    color: #0EA5E9; /* Utilisation de la couleur d'accent pour le poste */
+    color: #0EA5E9;            /* Couleur d'accent pour ton poste (Bleu Cyan Tech) */
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    margin-bottom: 25px;
+    margin-bottom: 1.5rem;
 }
 
-/* Titres de tes sections (Compétences, Expériences, Formations...) */
 h2 {
     font-size: 1.4rem;
-    border-bottom: 2px solid #F1F5F9; /* Ligne de séparation chirurgicale sous chaque titre */
-    padding-bottom: 6px;
-    margin-top: 35px;
-    margin-bottom: 20px;
+    border-bottom: 2px solid #E2E8F0; /* Ligne chirurgicale sous les titres */
+    padding-bottom: 0.375rem;
+    margin-top: 2.2rem;
+    margin-bottom: 1.25rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
 }
 
 /* ==========================================================================
-   4. STRUCTURE DES BLOCS ET ESPACEMENTS (Padding & Margin)
+   4. STRUCTURATION DES BLOCS ET ESPACEMENTS (Aération du CV)
    ========================================================================== */
 
 section {
-    margin-bottom: 30px; /* Espace extérieur pour séparer chaque bloc de contenu */
+    margin-bottom: 2.2rem;     /* Sépare proprement chaque grande thématique */
 }
 
-/* Blocs spécifiques dans les listes de définitions ou d'expériences */
 .item {
-    margin-bottom: 20px; /* Sépare deux expériences ou formations distinctes */
-}
-
-.item-title {
-    font-weight: 600;
-    color: #0F172A;
+    margin-bottom: 1.25rem;    /* Évite que deux expériences se collent */
 }
 
 .item-date {
     font-size: 0.9rem;
-    color: #64748B; /* Gris ardoise plus doux pour les métadonnées (dates, lieux) */
-    margin-bottom: 5px;
+    color: #64748B;            /* Gris ardoise doux pour les dates */
+    margin-bottom: 0.5rem;
 }
 
-/* ==========================================================================
-   5. LIENS ET PUCES MODERNES (10% Accent)
-   ========================================================================== */
-
-/* Style chirurgical pour tes coordonnées ou profils GitHub/LinkedIn */
-a {
-    color: #0EA5E9; /* Bleu Cyan Tech pour capter l'œil */
-    text-decoration: none; /* Nettoyage du soulignement à l'ancienne */
-    font-weight: 500;
+/* Style de la citation sémantique */
+blockquote {
+    margin: 1.25rem 0;
+    padding-left: 0.9rem;
+    border-left: 4px solid #0EA5E9;
+    font-style: italic;
+    color: #64748B;
 }
 
-/* Effet au survol de la souris */
-a:hover {
-    color: #0284C7; /* Devient légèrement plus foncé pour indiquer le clic */
-    text-decoration: underline; /* Le soulignement apparaît proprement au survol */
-}
-
-/* Nettoyage des listes à puces pour tes compétences */
+/* Structuration des listes et descriptions */
 ul {
-    list-style: none; /* Supprime les puces noires basiques du navigateur */
+    padding-left: 1.25rem;
 }
 
 ul li {
-    position: relative;
-    padding-left: 20px; /* Fait de la place pour la nouvelle puce personnalisée */
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
 }
 
-/* Génération de puces modernes et colorées en CSS */
-ul li::before {
-    content: "•";
-    color: #0EA5E9; /* Tes puces prennent ta couleur d'accent Bleu Cyan Tech */
-    font-weight: bold;
-    font-size: 1.2rem;
-    position: absolute;
-    left: 0;
-    top: -2px;
+dt {
+    font-weight: 600;
+    margin-top: 0.9rem;
 }
 
-/* Style spécifique pour ta photo de profil si tu l'as intégrée */
-img {
-    max-width: 150px;
-    border-radius: 50px; /* Rend la photo joliment arrondie */
-    border: 3px solid #E2E8F0; /* Ajoute un contour propre */
-    margin-bottom: 15px;
+dd {
+    color: #64748B;
+    margin-bottom: 0.75rem;
+    padding-left: 0.6rem;
+}
+
+/* ==========================================================================
+   5. BOUTONS DE CONTACT (Comportement INLINE-BLOCK & Accessibilité)
+   ========================================================================== */
+
+address {
+    font-style: normal;
+}
+
+address p {
+    margin-bottom: 0.75rem;
+}
+
+/* Transformation des liens en boutons modernes */
+address a {
+    display: inline-block;     /* Boîte hybride pour contrôler les espacements */
+    background-color: #0EA5E9; /* Ton Bleu Cyan Tech (10% d'accent) */
+    color: #FFFFFF;            /* Texte blanc pour le contraste */
+    padding: 0.5rem 1rem;       /* Marges intérieures basées sur le texte */
+    margin-right: 0.375rem;
+    margin-bottom: 0.375rem;
+    border-radius: 6px;        
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-decoration: none;     /* Supprime le soulignement */
+    outline: none;              /* Masque le contour rigide par défaut */
+    transition: all 0.2s ease;  /* Transition fluide pour le survol et le clavier */
+}
+
+/* État dynamique au survol de la souris */
+address a:hover {
+    background-color: #0284C7; /* Assombrissement subtil au survol */
+    color: #FFFFFF;
+}
+
+/* ACCESSIBILITÉ : État dynamique lors de la navigation au clavier (Touche TAB) */
+address a:focus {
+    background-color: #0284C7;
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.4); /* Halo lumineux de sécurité */
+}
+
+footer {
+    margin-top: 2.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #94A3B8;
 }
